@@ -13,6 +13,7 @@ namespace Calculator
         {
             if (ResultShowing)
             {
+                ResultShowing = false;
                 textBox1.Text = "";
             }
             textBox1.Text += "1";
@@ -23,6 +24,7 @@ namespace Calculator
         {
             if (ResultShowing)
             {
+                ResultShowing = false;
                 textBox1.Text = "";
             }
             textBox1.Text += "2";
@@ -33,6 +35,7 @@ namespace Calculator
         {
             if (ResultShowing)
             {
+                ResultShowing = false;
                 textBox1.Text = "";
             }
             textBox1.Text += "3";
@@ -43,6 +46,7 @@ namespace Calculator
         {
             if (ResultShowing)
             {
+                ResultShowing = false;
                 textBox1.Text = "";
             }
             textBox1.Text += "4";
@@ -53,6 +57,7 @@ namespace Calculator
         {
             if (ResultShowing)
             {
+                ResultShowing = false;
                 textBox1.Text = "";
             }
             textBox1.Text += "5";
@@ -63,6 +68,7 @@ namespace Calculator
         {
             if (ResultShowing)
             {
+                ResultShowing = false;
                 textBox1.Text = "";
             }
             textBox1.Text += "6";
@@ -73,6 +79,7 @@ namespace Calculator
         {
             if (ResultShowing)
             {
+                ResultShowing = false;
                 textBox1.Text = "";
             }
             textBox1.Text += "7";
@@ -83,6 +90,7 @@ namespace Calculator
         {
             if (ResultShowing)
             {
+                ResultShowing = false;
                 textBox1.Text = "";
             }
             textBox1.Text += "8";
@@ -93,6 +101,7 @@ namespace Calculator
         {
             if (ResultShowing)
             {
+                ResultShowing = false;
                 textBox1.Text = "";
             }
             textBox1.Text += "9";
@@ -103,6 +112,7 @@ namespace Calculator
         {
             if (ResultShowing)
             {
+                ResultShowing = false;
                 textBox1.Text = "";
             }
             textBox1.Text += "0";
@@ -128,7 +138,7 @@ namespace Calculator
             {
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Count() - 1);
             }
-            if (textBox1.Text.Count() > 0)
+            if (textBox1.Text.Count() > 0 && !ResultShowing)
             {
                 OnOperator = true;
                 AfterDot = false;
@@ -142,7 +152,7 @@ namespace Calculator
             {
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Count() - 1);
             }
-            if (textBox1.Text.Count() > 0)
+            if (textBox1.Text.Count() > 0 && !ResultShowing)
             {
                 OnOperator = true;
                 AfterDot = false;
@@ -156,7 +166,7 @@ namespace Calculator
             {
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Count() - 1);
             }
-            if (textBox1.Text.Count() > 0)
+            if (textBox1.Text.Count() > 0 && !ResultShowing)
             {
                 OnOperator = true;
                 AfterDot = false;
@@ -169,7 +179,7 @@ namespace Calculator
             {
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Count() - 1);
             }
-            if (textBox1.Text.Count() > 0)
+            if (textBox1.Text.Count() > 0 && !ResultShowing)
             {
                 OnOperator = true;
                 AfterDot = false;

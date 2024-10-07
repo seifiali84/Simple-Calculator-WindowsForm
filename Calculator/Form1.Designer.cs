@@ -53,6 +53,7 @@
             textBox1.Font = new Font("Segoe UI", 40F);
             textBox1.Location = new Point(12, 12);
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
             textBox1.Size = new Size(362, 78);
             textBox1.TabIndex = 0;
             // 

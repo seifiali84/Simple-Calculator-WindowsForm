@@ -1,3 +1,6 @@
+using System.Data;
+using System.Linq.Expressions;
+
 namespace Calculator
 {
     public partial class Form1 : Form
@@ -5,8 +8,11 @@ namespace Calculator
         bool AfterDot = false;
         bool OnOperator = false;
         bool ResultShowing = false;
+
+        DataTable Calculator;
         public Form1()
         {
+            Calculator = new DataTable();
             InitializeComponent();
         }
         private void button6_Click(object sender, EventArgs e)
@@ -128,7 +134,8 @@ namespace Calculator
                 OnOperator = false;
                 AfterDot = false;
 
-                textBox1.Text = "Result";
+                string Expression = textBox1.Text.Replace('÷', '/').Replace('×', '*');
+                textBox1.Text = Calculator.Compute(Expression, null).ToString();
             }
         }
         // Devide
@@ -189,6 +196,11 @@ namespace Calculator
 
         private void button16_Click(object sender, EventArgs e)
         {
+            if (ResultShowing)
+            {
+                ResultShowing = false;
+                textBox1.Text = "";
+            }
             if (!AfterDot)
             {
                 AfterDot = true;
